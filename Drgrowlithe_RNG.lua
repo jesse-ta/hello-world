@@ -44,9 +44,9 @@ end
  
 function precast(spell)
     if spell.type == 'Weaponskill' then
-		if spell.name == "Jishnu's Radiance" then
+		if spell.name == 'Jishnu\'s Radiance' then
 			equip(sets.WS.Jishnu)
-		elseif spell.name == "Namas Arrow" then
+		elseif spell.name == 'Namas Arrow' then
 			equip(sets.WS.Namas)
 		end
 	elseif spell.name == 'Ranged' then
@@ -58,13 +58,7 @@ function precast(spell)
 end
  
 function midcast(spell)
-    if spell.type == 'Weaponskill' then
-		if spell.name == "Jishnu's Radiance" then
-			equip(sets.WS.Jishnu)
-		elseif spell.name == "Namas Arrow" then
-			equip(sets.WS.Namas)
-		end
-	elseif spell.name == 'Ranged' then
+	if spell.name == 'Ranged' then
 		if buffactive.Barrage then
 			equip(sets.JA.Barrage)
 		else
