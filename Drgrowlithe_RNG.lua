@@ -43,12 +43,10 @@ function get_sets()
 end
  
 function precast(spell)
-    if spell.type == 'Weaponskill' then
-		if spell.name == 'Jishnu\'s Radiance' then
-			equip(sets.WS.Jishnu)
-		elseif spell.name == 'Namas Arrow' then
-			equip(sets.WS.Namas)
-		end
+	if string.find(spell.name,'Jishnu') then
+		equip(sets.WS.Jishnu)
+	elseif string.find(spell.name,'Namas') then
+		equip(sets.WS.Namas)
 	elseif spell.name == 'Ranged' then
 		equip(sets.precast.RA)
 	elseif spell.name == 'Barrage' then
